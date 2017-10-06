@@ -12,18 +12,30 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
-
-
+    var theTeam = [String:String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.leftBarButtonItem = editButtonItem
-
+        
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         navigationItem.rightBarButtonItem = addButton
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+        }
+        
+        if let path = Bundle.main.path(forResource:"catTeam", ofType: "json")
+        {
+            let data = NSData(contentsOfFile:path)
+            if let usableData = data {
+                do {
+                    theTeam = try JSONSerialization.jsonObject(with: usableData as Data, options: .mutableContainers)  as! [String:String]
+                } catch {
+                    print("JSON Processing Failed")
+                }
+            }
         }
     }
 
