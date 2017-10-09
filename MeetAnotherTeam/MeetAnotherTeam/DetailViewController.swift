@@ -10,16 +10,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    @IBOutlet weak var teammateImageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var profileView: TeammateProfileView!
 
     func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
-        }
+        
     }
 
     override func viewDidLoad() {
