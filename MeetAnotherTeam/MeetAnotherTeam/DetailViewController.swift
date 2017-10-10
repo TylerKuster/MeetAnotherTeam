@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var profileView: TeammateProfileView!
 
     var teammate = [String: String]()
+    var scrollViewHeight: CGFloat = 375.0
     
     func configureView() {
         if !teammate.isEmpty {
@@ -29,6 +30,7 @@ class DetailViewController: UIViewController {
             
             if let avatar = teammate["avatar"] {
                 // TODO: Add AFNetworking Pod and update this
+                teammateImageView.image = self.getImageFromURL(avatar)
             }
             
             if let title = teammate["title"] {
@@ -39,8 +41,10 @@ class DetailViewController: UIViewController {
                 profileView.bioTextView.attributedText = theme.styleProfileBioTextViewWith(text: bio)
             }
             
-            DispatchQueue.global(qos: .userInitiated).async {
-                self.scrollView.contentSize = CGSize.init(width: UIScreen.main.bounds.size.width, height: self.profileView.bioTextView.frame.size.height + 402.0)
+            DispatchQueue.main {
+            scrollViewHeight = self.profileView.bioTextView.frame.size.height + 402.0
+            scrollView.contentSize = CGSize.init(width: UIScreen.main.bounds.size.width, height: scrollViewHeight)
+            scrollView.setNeedsLayout()
             }
         }
     }
@@ -51,6 +55,11 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.contentSize = CGSize.init(width: UIScreen.main.bounds.size.width, height: scrollViewHeight)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -63,6 +72,17 @@ class DetailViewController: UIViewController {
         }
     }
 
-
+    func getImageFromURL(_ fileURL: String) -> UIImage {
+        let url = NSURL(string: fileURL)!
+        var image = UIImage()
+        
+        do {
+            image = try UIImage(data: Data(contentsOf: url as URL))!
+        } catch {
+            print("Image Failed")
+        }
+        
+        return image
+    }
 }
 

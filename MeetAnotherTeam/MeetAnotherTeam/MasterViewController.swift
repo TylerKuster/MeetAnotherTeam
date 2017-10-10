@@ -43,15 +43,34 @@ class MasterViewController: UITableViewController {
 
     // MARK: - Segues
 
+    func getImageFromURL(_ fileURL: String) -> UIImage {
+        let url = NSURL(string: fileURL)!
+        var image = UIImage()
+        
+        do {
+            image = try UIImage(data: Data(contentsOf: url as URL))!
+        } catch {
+            print("Image Failed")
+        }
+        
+        return image
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                let selectedTeammate = theTeam[indexPath.row]
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let selectedTeammate = theTeam[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
 //                controller.detailItem = object
+                controller.teammate = selectedTeammate as! [String : String]
+                
+                if let name = theTeam[indexPath.row]["firstName"] {
+                    controller.navigationItem.title = "\(name)"
+                }
+                
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
-//            }
+            }
         }
     }
 
@@ -73,11 +92,20 @@ class MasterViewController: UITableViewController {
             cell.teammateNameLabel.attributedText = theme.styleCellNameLabelWith(text: "\(first) \(last)")
         }
         
+        if let avatar = theTeam[indexPath.row]["avatar"] {
+            // TODO: Add AFNetworking Pod and update this
+            cell.teammateImageView.image = self.getImageFromURL("\(avatar)")
+        }
+        
         if let title = theTeam[indexPath.row]["title"] {
-            cell.teammatePositionLabel.attributedText = theme.styleCellPositionLabelWith(text: title as! String)
+            cell.teammatePositionLabel.attributedText = theme.styleCellPositionLabelWith(text: "\(title)")
         }
 //        let object = objects[indexPath.row] as! NSDate
 //        cell.textLabel!.text = object.description
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
 }

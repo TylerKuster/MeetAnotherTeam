@@ -70,11 +70,11 @@ class Theme: NSObject {
         let nsText = text as NSString
         let textRange = NSMakeRange(0, nsText.length)
         
-        attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Lato-Regular", size: 27.0)!, range:NSRange.init(text)!)
-        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: themeGrey(), range: NSRange.init(text)!)
-        attributedString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: NSRange.init(text)!)
-        attributedString.addAttribute(NSAttributedStringKey.kern, value:-0.56, range: NSRange.init(text)!)
-        attributedString.addAttribute(NSAttributedStringKey.baselineOffset, value: 0, range: NSRange.init(text)!)
+        attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Lato-Regular", size: 18.0)!, range:textRange)
+        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: themeGrey(), range:textRange)
+        attributedString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range:textRange)
+        attributedString.addAttribute(NSAttributedStringKey.kern, value:-0.56, range:textRange)
+        attributedString.addAttribute(NSAttributedStringKey.baselineOffset, value: 0, range:textRange)
         
         return attributedString
     }

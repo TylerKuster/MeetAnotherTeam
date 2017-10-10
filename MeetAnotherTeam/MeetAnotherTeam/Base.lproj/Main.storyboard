@@ -46,11 +46,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xRS-TJ-9Fz">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRS-TJ-9Fz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ORb-0o-rld">
-                                        <rect key="frame" x="0.0" y="-31" width="375" height="1155"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ORb-0o-rld">
+                                        <rect key="frame" x="0.0" y="-31" width="375" height="375"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="JZE-G3-IyC"/>
                                         </constraints>
@@ -95,20 +95,19 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ORb-0o-rld" firstAttribute="bottom" secondItem="CeY-sN-9jH" secondAttribute="bottom" priority="750" constant="-110" id="dm1-W2-rva"/>
+                                    <constraint firstItem="CeY-sN-9jH" firstAttribute="top" secondItem="ORb-0o-rld" secondAttribute="bottom" priority="750" constant="-110" id="NLp-rI-AiW"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="bottom" secondItem="xRS-TJ-9Fz" secondAttribute="bottom" id="Gpr-Gg-2Mn"/>
+                            <constraint firstItem="xRS-TJ-9Fz" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" id="956-yE-Gn8"/>
+                            <constraint firstItem="xRS-TJ-9Fz" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" id="FjR-yW-41D"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="ORb-0o-rld" secondAttribute="trailing" id="Q6I-pD-sQA"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="xRS-TJ-9Fz" secondAttribute="trailing" id="WZe-Fu-SzY"/>
-                            <constraint firstItem="xRS-TJ-9Fz" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" id="XaY-ii-zCf"/>
                             <constraint firstItem="CeY-sN-9jH" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="234" id="akM-Mc-mKr"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="CeY-sN-9jH" secondAttribute="trailing" id="bGH-72-4U0"/>
-                            <constraint firstItem="xRS-TJ-9Fz" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" id="dyP-N9-xDj"/>
-                            <constraint firstItem="CeY-sN-9jH" firstAttribute="bottom" secondItem="VUw-jc-0yf" secondAttribute="bottom" constant="631" id="ftx-AR-hPb"/>
+                            <constraint firstItem="xRS-TJ-9Fz" firstAttribute="bottom" secondItem="VUw-jc-0yf" secondAttribute="bottom" id="eCu-bd-gJc"/>
+                            <constraint firstItem="xRS-TJ-9Fz" firstAttribute="trailing" secondItem="VUw-jc-0yf" secondAttribute="trailing" id="hFU-S8-KAI"/>
                             <constraint firstItem="CeY-sN-9jH" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" id="iXP-Zr-hvS"/>
                             <constraint firstItem="CeY-sN-9jH" firstAttribute="centerX" secondItem="VUw-jc-0yf" secondAttribute="centerX" id="mIK-CP-A7W"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="top" secondItem="ORb-0o-rld" secondAttribute="top" constant="31" id="qEI-T8-2bu"/>
@@ -120,7 +119,7 @@
                     <navigationItem key="navigationItem" title="Teammate" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="profileView" destination="CeY-sN-9jH" id="qVs-a4-XO8"/>
-                        <outlet property="scrollView" destination="xRS-TJ-9Fz" id="1TX-bO-Gmk"/>
+                        <outlet property="scrollView" destination="xRS-TJ-9Fz" id="P88-0U-gwV"/>
                         <outlet property="teammateImageView" destination="ORb-0o-rld" id="shW-5v-PJa"/>
                     </connections>
                 </viewController>
@@ -198,6 +197,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>
