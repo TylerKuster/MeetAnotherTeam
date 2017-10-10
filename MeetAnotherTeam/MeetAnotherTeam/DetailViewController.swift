@@ -41,10 +41,10 @@ class DetailViewController: UIViewController {
                 profileView.bioTextView.attributedText = theme.styleProfileBioTextViewWith(text: bio)
             }
             
-            DispatchQueue.main {
-            scrollViewHeight = self.profileView.bioTextView.frame.size.height + 402.0
-            scrollView.contentSize = CGSize.init(width: UIScreen.main.bounds.size.width, height: scrollViewHeight)
-            scrollView.setNeedsLayout()
+            let delayInSeconds = 1.0 // 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + delayInSeconds) { // 2
+                self.scrollView.contentSize = CGSize.init(width: UIScreen.main.bounds.size.width, height: self.profileView.bioTextView.frame.size.height + 402.0)
+                self.scrollView.setNeedsLayout()
             }
         }
     }
@@ -57,7 +57,7 @@ class DetailViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scrollView.contentSize = CGSize.init(width: UIScreen.main.bounds.size.width, height: scrollViewHeight)
+//        scrollView.contentSize = CGSize.init(width: UIScreen.main.bounds.size.width, height: scrollViewHeight)
     }
     
     override func didReceiveMemoryWarning() {
