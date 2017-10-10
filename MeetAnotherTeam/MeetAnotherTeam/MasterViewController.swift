@@ -12,7 +12,7 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
-    var theTeam = [String:String]()
+    var theTeam = [Int:String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class MasterViewController: UITableViewController {
             let data = NSData(contentsOfFile:path)
             if let usableData = data {
                 do {
-                    theTeam = try JSONSerialization.jsonObject(with: usableData as Data, options: .mutableContainers)  as! [String:String]
+                    theTeam = try JSONSerialization.jsonObject(with: usableData as Data, options: .mutableContainers)  as! [Int:String]
                 } catch {
                     print("JSON Processing Failed")
                 }
@@ -61,9 +61,9 @@ class MasterViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
+                let selectedTeammate = theTeam[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
+//                controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -83,6 +83,7 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TeammateTableViewCell
 
+        
         let object = objects[indexPath.row] as! NSDate
         cell.textLabel!.text = object.description
         return cell

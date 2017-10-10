@@ -18,6 +18,10 @@
 		6C46FAD21F8BFCB700243C9A /* TeammateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C46FAD11F8BFCB700243C9A /* TeammateProfileView.swift */; };
 		6C46FAD91F8C0AE900243C9A /* TeammateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C46FAD81F8C0AE900243C9A /* TeammateTableViewCell.swift */; };
 		6C5EBA961F8C143500FDA202 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5EBA951F8C143500FDA202 /* Theme.swift */; };
+		6C5EBA971F8C6CF100FDA202 /* catTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C46FAD41F8C027100243C9A /* catTeam.json */; };
+		6C5EBA981F8C6CF700FDA202 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C46FAD71F8C028700243C9A /* Lato-Bold.ttf */; };
+		6C5EBA991F8C6CF700FDA202 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C46FAD51F8C028700243C9A /* Lato-Regular.ttf */; };
+		6C5EBA9A1F8C6CF700FDA202 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C46FAD61F8C028700243C9A /* Lato-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -270,9 +274,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C5EBA9A1F8C6CF700FDA202 /* Lato-Semibold.ttf in Resources */,
 				46B248671F87182C00C9E3BE /* LaunchScreen.storyboard in Resources */,
+				6C5EBA991F8C6CF700FDA202 /* Lato-Regular.ttf in Resources */,
+				6C5EBA981F8C6CF700FDA202 /* Lato-Bold.ttf in Resources */,
 				46B248641F87182C00C9E3BE /* Assets.xcassets in Resources */,
 				46B248621F87182C00C9E3BE /* Main.storyboard in Resources */,
+				6C5EBA971F8C6CF100FDA202 /* catTeam.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
