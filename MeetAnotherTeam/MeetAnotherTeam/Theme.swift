@@ -16,48 +16,48 @@ class Theme: NSObject {
     
     func styleCellNameLabelWith(text:String) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString.init(string: text)
+        let nsText = text as NSString
+        let textRange = NSMakeRange(0, nsText.length)
         
-        attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Lato-Regular", size: 17.0)!, range:NSRange.init(text)!)
-        
-        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: themeGrey(), range: NSRange.init(text)!)
-        
-        attributedString.addAttribute(NSAttributedStringKey.kern, value:-0.1, range: NSRange.init(text)!)
+        attributedString.addAttributes([NSAttributedStringKey.font : UIFont(name: "Lato-Regular", size: 17.0)!,
+                                        NSAttributedStringKey.foregroundColor : themeGrey(),
+                                        NSAttributedStringKey.kern : -0.1], range: textRange)
         
         return attributedString
     }
     
     func styleCellPositionLabelWith(text:String) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString.init(string: text)
+        let nsText = text as NSString
+        let textRange = NSMakeRange(0, nsText.length)
         
-        attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Lato-Regular", size: 14.0)!, range:NSRange.init(text)!)
-        
-        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: themeGrey(), range: NSRange.init(text)!)
-        
-        attributedString.addAttribute(NSAttributedStringKey.kern, value:-0.2, range: NSRange.init(text)!)
+        attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Lato-Regular", size: 14.0)!, range:textRange)
+        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: themeGrey(), range:textRange)
+        attributedString.addAttribute(NSAttributedStringKey.kern, value:-0.2, range:textRange)
         
         return attributedString
     }
     
     func styleProfileNameLabelWith(text:String) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString.init(string: text)
+        let nsText = text as NSString
+        let textRange = NSMakeRange(0, nsText.length)
         
-        attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Lato-Bold", size: 27.0)!, range:NSRange.init(text)!)
-        
-        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: themeGrey(), range: NSRange.init(text)!)
-        
-        attributedString.addAttribute(NSAttributedStringKey.kern, value:-0.5, range: NSRange.init(text)!)
+        attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Lato-Bold", size: 27.0)!, range:textRange)
+        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: themeGrey(), range:textRange)
+        attributedString.addAttribute(NSAttributedStringKey.kern, value:-0.5, range:textRange)
         
         return attributedString
     }
     
     func styleProfilePositionLabelWith(text:String) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString.init(string: text)
+        let nsText = text as NSString
+        let textRange = NSMakeRange(0, nsText.length)
         
-        attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Lato-Semibold", size: 20.0)!, range:NSRange.init(text)!)
-        
-        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: themeGrey(), range: NSRange.init(text)!)
-        
-        attributedString.addAttribute(NSAttributedStringKey.kern, value:-0.5, range: NSRange.init(text)!)
+        attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Lato-Semibold", size: 20.0)!, range:textRange)
+        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: themeGrey(), range:textRange)
+        attributedString.addAttribute(NSAttributedStringKey.kern, value:-0.5, range:textRange)
         
         return attributedString
     }
@@ -67,15 +67,13 @@ class Theme: NSObject {
         paragraphStyle.alignment = NSTextAlignment.justified
         
         let attributedString = NSMutableAttributedString.init(string: text)
+        let nsText = text as NSString
+        let textRange = NSMakeRange(0, nsText.length)
         
         attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Lato-Regular", size: 27.0)!, range:NSRange.init(text)!)
-        
         attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: themeGrey(), range: NSRange.init(text)!)
-        
         attributedString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: NSRange.init(text)!)
-        
         attributedString.addAttribute(NSAttributedStringKey.kern, value:-0.56, range: NSRange.init(text)!)
-        
         attributedString.addAttribute(NSAttributedStringKey.baselineOffset, value: 0, range: NSRange.init(text)!)
         
         return attributedString

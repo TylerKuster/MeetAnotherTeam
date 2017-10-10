@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		461156FD1F8C7FDC009E5605 /* TeammateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C46FAE01F8C0DAC00243C9A /* TeammateTableViewCell.xib */; };
+		461156FE1F8C81A1009E5605 /* catTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = 461156F91F8C6D3F009E5605 /* catTeam.json */; };
+		461156FF1F8C81A6009E5605 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 461156FB1F8C6D4D009E5605 /* Lato-Bold.ttf */; };
+		461157001F8C81A6009E5605 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 461156FC1F8C6D4D009E5605 /* Lato-Regular.ttf */; };
+		461157011F8C81A6009E5605 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 461156FA1F8C6D4C009E5605 /* Lato-Semibold.ttf */; };
 		46B2485B1F87182C00C9E3BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2485A1F87182C00C9E3BE /* AppDelegate.swift */; };
 		46B2485D1F87182C00C9E3BE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2485C1F87182C00C9E3BE /* MasterViewController.swift */; };
 		46B2485F1F87182C00C9E3BE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2485E1F87182C00C9E3BE /* DetailViewController.swift */; };
@@ -18,10 +23,6 @@
 		6C46FAD21F8BFCB700243C9A /* TeammateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C46FAD11F8BFCB700243C9A /* TeammateProfileView.swift */; };
 		6C46FAD91F8C0AE900243C9A /* TeammateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C46FAD81F8C0AE900243C9A /* TeammateTableViewCell.swift */; };
 		6C5EBA961F8C143500FDA202 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5EBA951F8C143500FDA202 /* Theme.swift */; };
-		6C5EBA971F8C6CF100FDA202 /* catTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C46FAD41F8C027100243C9A /* catTeam.json */; };
-		6C5EBA981F8C6CF700FDA202 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C46FAD71F8C028700243C9A /* Lato-Bold.ttf */; };
-		6C5EBA991F8C6CF700FDA202 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C46FAD51F8C028700243C9A /* Lato-Regular.ttf */; };
-		6C5EBA9A1F8C6CF700FDA202 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C46FAD61F8C028700243C9A /* Lato-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		461156F91F8C6D3F009E5605 /* catTeam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = catTeam.json; path = /Users/Digit0w1/Development/iOS/MeetAnotherTeam/MeetAnotherTeam/MeetAnotherTeam/Assets/catTeam.json; sourceTree = "<absolute>"; };
+		461156FA1F8C6D4C009E5605 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		461156FB1F8C6D4D009E5605 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		461156FC1F8C6D4D009E5605 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		46B248571F87182C00C9E3BE /* MeetAnotherTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetAnotherTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B2485A1F87182C00C9E3BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46B2485C1F87182C00C9E3BE /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -57,12 +62,8 @@
 		46B2487C1F87182C00C9E3BE /* MeetAnotherTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetAnotherTeamUITests.swift; sourceTree = "<group>"; };
 		46B2487E1F87182C00C9E3BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C46FAD11F8BFCB700243C9A /* TeammateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeammateProfileView.swift; sourceTree = "<group>"; };
-		6C46FAD41F8C027100243C9A /* catTeam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = catTeam.json; sourceTree = "<group>"; };
-		6C46FAD51F8C028700243C9A /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		6C46FAD61F8C028700243C9A /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
-		6C46FAD71F8C028700243C9A /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		6C46FAD81F8C0AE900243C9A /* TeammateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeammateTableViewCell.swift; sourceTree = "<group>"; };
-		6C46FAE01F8C0DAC00243C9A /* TeammateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeammateTableViewCell.xib; sourceTree = "<group>"; };
+		6C46FAE01F8C0DAC00243C9A /* TeammateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TeammateTableViewCell.xib; path = /Users/Digit0w1/Development/iOS/MeetAnotherTeam/MeetAnotherTeam/MeetAnotherTeam/TableViewCell/TeammateTableViewCell.xib; sourceTree = "<absolute>"; };
 		6C5EBA951F8C143500FDA202 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,13 +151,14 @@
 		6C46FAD31F8C024D00243C9A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				6C46FAD41F8C027100243C9A /* catTeam.json */,
-				6C46FAD71F8C028700243C9A /* Lato-Bold.ttf */,
-				6C46FAD51F8C028700243C9A /* Lato-Regular.ttf */,
-				6C46FAD61F8C028700243C9A /* Lato-Semibold.ttf */,
+				461156F91F8C6D3F009E5605 /* catTeam.json */,
+				461156FB1F8C6D4D009E5605 /* Lato-Bold.ttf */,
+				461156FC1F8C6D4D009E5605 /* Lato-Regular.ttf */,
+				461156FA1F8C6D4C009E5605 /* Lato-Semibold.ttf */,
 			);
-			path = Assets;
-			sourceTree = "<group>";
+			name = Assets;
+			path = /Users/Digit0w1/Development/iOS/MeetAnotherTeam/MeetAnotherTeam/MeetAnotherTeam/Assets;
+			sourceTree = "<absolute>";
 		};
 		6C46FADC1F8C0C1D00243C9A /* TableViewCell */ = {
 			isa = PBXGroup;
@@ -274,13 +276,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C5EBA9A1F8C6CF700FDA202 /* Lato-Semibold.ttf in Resources */,
 				46B248671F87182C00C9E3BE /* LaunchScreen.storyboard in Resources */,
-				6C5EBA991F8C6CF700FDA202 /* Lato-Regular.ttf in Resources */,
-				6C5EBA981F8C6CF700FDA202 /* Lato-Bold.ttf in Resources */,
+				461157011F8C81A6009E5605 /* Lato-Semibold.ttf in Resources */,
+				461156FF1F8C81A6009E5605 /* Lato-Bold.ttf in Resources */,
 				46B248641F87182C00C9E3BE /* Assets.xcassets in Resources */,
 				46B248621F87182C00C9E3BE /* Main.storyboard in Resources */,
-				6C5EBA971F8C6CF100FDA202 /* catTeam.json in Resources */,
+				461157001F8C81A6009E5605 /* Lato-Regular.ttf in Resources */,
+				461156FE1F8C81A1009E5605 /* catTeam.json in Resources */,
+				461156FD1F8C7FDC009E5605 /* TeammateTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

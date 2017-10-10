@@ -11,27 +11,24 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var objects = [Any]()
-    var theTeam = [Int:String]()
+    var theTeam = [[ : ]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        navigationItem.leftBarButtonItem = editButtonItem
-        
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-        navigationItem.rightBarButtonItem = addButton
+
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        tableView.register(UINib.init(nibName: "TeammateTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
         if let path = Bundle.main.path(forResource:"catTeam", ofType: "json")
         {
             let data = NSData(contentsOfFile:path)
             if let usableData = data {
                 do {
-                    theTeam = try JSONSerialization.jsonObject(with: usableData as Data, options: .mutableContainers)  as! [Int:String]
+                    theTeam = try JSONSerialization.jsonObject(with: usableData as Data, options: .mutableContainers)  as! [Dictionary]
                 } catch {
                     print("JSON Processing Failed")
                 }
@@ -39,34 +36,22 @@ class MasterViewController: UITableViewController {
         }
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
-        super.viewWillAppear(animated)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @objc
-    func insertNewObject(_ sender: Any) {
-        objects.insert(NSDate(), at: 0)
-        let indexPath = IndexPath(row: 0, section: 0)
-        tableView.insertRows(at: [indexPath], with: .automatic)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
+//        super.viewWillAppear(animated)
+//    }
 
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let selectedTeammate = theTeam[indexPath.row]
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//                let selectedTeammate = theTeam[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
 //                controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
-            }
+//            }
         }
     }
 
@@ -82,27 +67,17 @@ class MasterViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TeammateTableViewCell
+        let theme = Theme.init()
 
+        if let first = theTeam[indexPath.row]["firstName"], let last = theTeam[indexPath.row]["lastName"] {
+            cell.teammateNameLabel.attributedText = theme.styleCellNameLabelWith(text: "\(first) \(last)")
+        }
         
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
+        if let title = theTeam[indexPath.row]["title"] {
+            cell.teammatePositionLabel.attributedText = theme.styleCellPositionLabelWith(text: title as! String)
+        }
+//        let object = objects[indexPath.row] as! NSDate
+//        cell.textLabel!.text = object.description
         return cell
     }
-
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            objects.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
-
-
 }
-
