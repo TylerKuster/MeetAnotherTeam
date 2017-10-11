@@ -36,11 +36,6 @@ class MasterViewController: UITableViewController {
         }
     }
 
-//    override func viewWillAppear(_ animated: Bool) {
-//        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
-//        super.viewWillAppear(animated)
-//    }
-
     // MARK: - Segues
 
     func getImageFromURL(_ fileURL: String) -> UIImage {
@@ -61,7 +56,6 @@ class MasterViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let selectedTeammate = theTeam[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-//                controller.detailItem = object
                 controller.teammate = selectedTeammate as! [String : String]
                 
                 if let name = theTeam[indexPath.row]["firstName"] {
@@ -93,15 +87,13 @@ class MasterViewController: UITableViewController {
         }
         
         if let avatar = theTeam[indexPath.row]["avatar"] {
-            // TODO: Add AFNetworking Pod and update this
             cell.teammateImageView.image = self.getImageFromURL("\(avatar)")
         }
         
         if let title = theTeam[indexPath.row]["title"] {
             cell.teammatePositionLabel.attributedText = theme.styleCellPositionLabelWith(text: "\(title)")
         }
-//        let object = objects[indexPath.row] as! NSDate
-//        cell.textLabel!.text = object.description
+
         return cell
     }
     

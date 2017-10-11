@@ -29,7 +29,6 @@ class DetailViewController: UIViewController {
             }
             
             if let avatar = teammate["avatar"] {
-                // TODO: Add AFNetworking Pod and update this
                 teammateImageView.image = self.getImageFromURL(avatar)
             }
             
@@ -51,23 +50,11 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         configureView()
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-//        scrollView.contentSize = CGSize.init(width: UIScreen.main.bounds.size.width, height: scrollViewHeight)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     var detailItem: NSDate? {
         didSet {
-            // Update the view.
             configureView()
         }
     }
