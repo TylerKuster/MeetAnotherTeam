@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		461156FD1F8C7FDC009E5605 /* TeammateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C46FAE01F8C0DAC00243C9A /* TeammateTableViewCell.xib */; };
-		461156FE1F8C81A1009E5605 /* catTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = 461156F91F8C6D3F009E5605 /* catTeam.json */; };
-		461156FF1F8C81A6009E5605 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 461156FB1F8C6D4D009E5605 /* Lato-Bold.ttf */; };
-		461157001F8C81A6009E5605 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 461156FC1F8C6D4D009E5605 /* Lato-Regular.ttf */; };
-		461157011F8C81A6009E5605 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 461156FA1F8C6D4C009E5605 /* Lato-Semibold.ttf */; };
 		46B2485B1F87182C00C9E3BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2485A1F87182C00C9E3BE /* AppDelegate.swift */; };
 		46B2485D1F87182C00C9E3BE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2485C1F87182C00C9E3BE /* MasterViewController.swift */; };
 		46B2485F1F87182C00C9E3BE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2485E1F87182C00C9E3BE /* DetailViewController.swift */; };
@@ -20,6 +15,11 @@
 		46B248671F87182C00C9E3BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B248651F87182C00C9E3BE /* LaunchScreen.storyboard */; };
 		46B248721F87182C00C9E3BE /* MeetAnotherTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B248711F87182C00C9E3BE /* MeetAnotherTeamTests.swift */; };
 		46B2487D1F87182C00C9E3BE /* MeetAnotherTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2487C1F87182C00C9E3BE /* MeetAnotherTeamUITests.swift */; };
+		6C18454D286699B30059C3CF /* TeammateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C18454C286699B30059C3CF /* TeammateTableViewCell.xib */; };
+		6C18455228669BD90059C3CF /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C18454E28669BD90059C3CF /* Lato-Semibold.ttf */; };
+		6C18455328669BD90059C3CF /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C18454F28669BD90059C3CF /* Lato-Bold.ttf */; };
+		6C18455428669BD90059C3CF /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C18455028669BD90059C3CF /* Lato-Regular.ttf */; };
+		6C18455528669BD90059C3CF /* catTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C18455128669BD90059C3CF /* catTeam.json */; };
 		6C46FAD21F8BFCB700243C9A /* TeammateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C46FAD11F8BFCB700243C9A /* TeammateProfileView.swift */; };
 		6C46FAD91F8C0AE900243C9A /* TeammateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C46FAD81F8C0AE900243C9A /* TeammateTableViewCell.swift */; };
 		6C5EBA961F8C143500FDA202 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5EBA951F8C143500FDA202 /* Theme.swift */; };
@@ -43,10 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		461156F91F8C6D3F009E5605 /* catTeam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = catTeam.json; path = /Users/Digit0w1/Development/iOS/MeetAnotherTeam/MeetAnotherTeam/MeetAnotherTeam/Assets/catTeam.json; sourceTree = "<absolute>"; };
-		461156FA1F8C6D4C009E5605 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
-		461156FB1F8C6D4D009E5605 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
-		461156FC1F8C6D4D009E5605 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		46B248571F87182C00C9E3BE /* MeetAnotherTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetAnotherTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B2485A1F87182C00C9E3BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46B2485C1F87182C00C9E3BE /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -62,9 +58,13 @@
 		46B2487C1F87182C00C9E3BE /* MeetAnotherTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetAnotherTeamUITests.swift; sourceTree = "<group>"; };
 		46B2487E1F87182C00C9E3BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46DFDEE41F8D147100FD7986 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C18454C286699B30059C3CF /* TeammateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TeammateTableViewCell.xib; path = ../../../../MeetTheTeam/MeetTheTeam/MeetTheTeam/TeammateTableViewCell.xib; sourceTree = "<group>"; };
+		6C18454E28669BD90059C3CF /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		6C18454F28669BD90059C3CF /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		6C18455028669BD90059C3CF /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		6C18455128669BD90059C3CF /* catTeam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = catTeam.json; sourceTree = "<group>"; };
 		6C46FAD11F8BFCB700243C9A /* TeammateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeammateProfileView.swift; sourceTree = "<group>"; };
 		6C46FAD81F8C0AE900243C9A /* TeammateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeammateTableViewCell.swift; sourceTree = "<group>"; };
-		6C46FAE01F8C0DAC00243C9A /* TeammateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TeammateTableViewCell.xib; path = /Users/Digit0w1/Development/iOS/MeetAnotherTeam/MeetAnotherTeam/MeetAnotherTeam/TableViewCell/TeammateTableViewCell.xib; sourceTree = "<absolute>"; };
 		6C5EBA951F8C143500FDA202 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,9 +117,12 @@
 		46B248591F87182C00C9E3BE /* MeetAnotherTeam */ = {
 			isa = PBXGroup;
 			children = (
-				6C46FAD31F8C024D00243C9A /* Assets */,
 				46B2485A1F87182C00C9E3BE /* AppDelegate.swift */,
 				46B2485C1F87182C00C9E3BE /* MasterViewController.swift */,
+				6C18455128669BD90059C3CF /* catTeam.json */,
+				6C18454F28669BD90059C3CF /* Lato-Bold.ttf */,
+				6C18455028669BD90059C3CF /* Lato-Regular.ttf */,
+				6C18454E28669BD90059C3CF /* Lato-Semibold.ttf */,
 				6C5EBA951F8C143500FDA202 /* Theme.swift */,
 				6C46FADC1F8C0C1D00243C9A /* TableViewCell */,
 				46B2485E1F87182C00C9E3BE /* DetailViewController.swift */,
@@ -150,23 +153,11 @@
 			path = MeetAnotherTeamUITests;
 			sourceTree = "<group>";
 		};
-		6C46FAD31F8C024D00243C9A /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				461156F91F8C6D3F009E5605 /* catTeam.json */,
-				461156FB1F8C6D4D009E5605 /* Lato-Bold.ttf */,
-				461156FC1F8C6D4D009E5605 /* Lato-Regular.ttf */,
-				461156FA1F8C6D4C009E5605 /* Lato-Semibold.ttf */,
-			);
-			name = Assets;
-			path = /Users/Digit0w1/Development/iOS/MeetAnotherTeam/MeetAnotherTeam/MeetAnotherTeam/Assets;
-			sourceTree = "<absolute>";
-		};
 		6C46FADC1F8C0C1D00243C9A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				6C46FAD81F8C0AE900243C9A /* TeammateTableViewCell.swift */,
-				6C46FAE01F8C0DAC00243C9A /* TeammateTableViewCell.xib */,
+				6C18454C286699B30059C3CF /* TeammateTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -242,20 +233,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "12 Triangles";
 				TargetAttributes = {
 					46B248561F87182C00C9E3BE = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1320;
 						ProvisioningStyle = Automatic;
 					};
 					46B2486C1F87182C00C9E3BE = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1320;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 46B248561F87182C00C9E3BE;
 					};
 					46B248771F87182C00C9E3BE = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1320;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 46B248561F87182C00C9E3BE;
 					};
@@ -286,14 +280,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C18455228669BD90059C3CF /* Lato-Semibold.ttf in Resources */,
+				6C18455328669BD90059C3CF /* Lato-Bold.ttf in Resources */,
 				46B248671F87182C00C9E3BE /* LaunchScreen.storyboard in Resources */,
-				461157011F8C81A6009E5605 /* Lato-Semibold.ttf in Resources */,
-				461156FF1F8C81A6009E5605 /* Lato-Bold.ttf in Resources */,
+				6C18455528669BD90059C3CF /* catTeam.json in Resources */,
 				46B248641F87182C00C9E3BE /* Assets.xcassets in Resources */,
+				6C18455428669BD90059C3CF /* Lato-Regular.ttf in Resources */,
+				6C18454D286699B30059C3CF /* TeammateTableViewCell.xib in Resources */,
 				46B248621F87182C00C9E3BE /* Main.storyboard in Resources */,
-				461157001F8C81A6009E5605 /* Lato-Regular.ttf in Resources */,
-				461156FE1F8C81A1009E5605 /* catTeam.json in Resources */,
-				461156FD1F8C7FDC009E5605 /* TeammateTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +386,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -399,8 +394,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -426,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -449,6 +446,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -456,8 +454,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -477,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -490,11 +490,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RC2TXRS7D;
 				INFOPLIST_FILE = MeetAnotherTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.12-Triangles.MeetAnotherTeam";
+				PRODUCT_BUNDLE_IDENTIFIER = com.triangles12.meetAnotherTeam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -504,11 +505,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RC2TXRS7D;
 				INFOPLIST_FILE = MeetAnotherTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.12-Triangles.MeetAnotherTeam";
+				PRODUCT_BUNDLE_IDENTIFIER = com.triangles12.meetAnotherTeam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -519,11 +521,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RC2TXRS7D;
 				INFOPLIST_FILE = MeetAnotherTeamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.12-Triangles.MeetAnotherTeamTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetAnotherTeam.app/MeetAnotherTeam";
 			};
@@ -535,11 +538,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RC2TXRS7D;
 				INFOPLIST_FILE = MeetAnotherTeamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.12-Triangles.MeetAnotherTeamTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetAnotherTeam.app/MeetAnotherTeam";
 			};
@@ -550,11 +554,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RC2TXRS7D;
 				INFOPLIST_FILE = MeetAnotherTeamUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.12-Triangles.MeetAnotherTeamUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MeetAnotherTeam;
 			};
@@ -565,11 +570,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RC2TXRS7D;
 				INFOPLIST_FILE = MeetAnotherTeamUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.12-Triangles.MeetAnotherTeamUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MeetAnotherTeam;
 			};
